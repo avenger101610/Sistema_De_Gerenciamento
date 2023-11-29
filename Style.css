@@ -1,9 +1,64 @@
-.rowmundo{
+.rowtitle{
     color: rgb(0, 0, 0);
     font-size: 25px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(179, 67, 67);
     display: flex;
+    justify-content: left;
+    flex-direction: column;
+    align-items: left;
+    margin: 0px;
+    position: relative;
+    font: bold;
+    border: rgb(151, 56, 56)10px solid;
+}
+
+.rownews{
+    height: 50px;
+    display: flex;
+    background-color: white;
+
+}
+
+.flex{
+    display:flex;
+    align-items: center;
+}
+
+.sino{
+    height: 70px;
+    position: relative;
+    left: 900px;
+    
+}
+
+.hide{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
+.button_new_task{
+    font: bold;
+    color: black;
+    background-color: darkseagreen;
+    display: flex;
+    position: relative;
     justify-content: center;
+    height: 60px;
+    width: 450px;
+    font-size: 40px;
+
+}
+/*dúvida de como por uma borda no iframe*/
+.tarefinha{
+    border: black 1000000px solid;
+}
+
+.info_new_tarefa{
+    position: relative;
+    display: flex;
     flex-direction: column;
     align-items: center;
 }

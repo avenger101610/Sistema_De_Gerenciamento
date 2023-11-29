@@ -1,17 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="css/Style.css">
+    <link rel="stylesheet" href="Style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>System</title>
 </head>
-<body>
+<body style="background-color: rgb(211, 96, 96);">
     <header>
-        <div class="row rowmundo">
-            <h1>Sistema de Gerenciamento de Tarefas</h1>
-            <p>Organização de Tarefas</p>
+        <div class="row rowtitle">
+            <div class="flex">
+                <h1><b>Sistema de Gerenciamento de Tarefas</b></h1>
+                <img class="sino" src="Images\Sino.png">
+            </div>
+            <p>Otimizador de Trabalho</p>
         </div>
     </header>
+    
+    <div>
+        <button class="button_new_task" onclick="New_task()" type="button" name="button">Adicionar nova tarefa</button>
+    </div>
+    <form action="Tarefa_nova.html" method="get">
+
+    </form>
+    <iframe class="hide" name="Nova_tarefa" src="Tarefa_nova.html" id="frame" Style="height: 400px; width: 600px;"></iframe>
+
+    <script src="Index.js"></script>
+
+    
+
+
+
 </body>
 </html>
