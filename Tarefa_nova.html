@@ -5,31 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>tarefa</title>
 </head>
-<body style="background-color: rgb(240, 123, 123);" class="tarefinha">
-    
+<body>
     <div>
-        <h1>Nova Tarefa:</h1>
+        <header>
+            <h1>Nova Tarefa:</h1>
+        </header>
+        <main class="info_new_tarefa">
+            <article>
+                <label for="Name">Nome da tarefa:</label>
+                <input type="text" id="Name">
+            </article>
+            <article>
+                <label for="Description">Descrição:</label>
+                <input type="text" id="Description">
+            </article>
+            <article>
+                <input type="radio" name="status" id="completo">
+                <label for="completo">completo</label>
+                <input type="radio" name="status" id="incompleto">
+                <label for="incompleto">incompleto</label>
+            </article>
+            <article>
+                <button type="submit">enviar</button>
+                <button type="reset">resetar</button>
+            </article>
+        </main>
     </div>
-    <div class="info_new_tarefa">
-        <div>
-            <label for="Name">Nome da tarefa:</label>
-            <input type="text" id="Name">
-        </div>
-        <div>
-            <label for="Description">Descrição:</label>
-            <input type="text" id="Description">
-        </div>
-        <div>
-            <input type="radio" name="status" id="completo">
-            <label for="completo">completo</label>
-            <input type="radio" name="status" id="incompleto">
-            <label for="incompleto">incompleto</label>
-        </div>
-        <div>
-            <button type="submit">enviar</button>
-            <button type="reset">resetar</button>
-        </div>
-    </div>
-    
 </body>
 </html>
