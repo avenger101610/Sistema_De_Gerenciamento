@@ -1,7 +1,6 @@
 
 // Código para abrir a tela de Nova Tarefa
 function New_task(){
-    console.log('oi');
     var see = document.querySelector('#frame');
     if (see.classList.contains('hide')) {
         see.classList.replace('hide','show');
@@ -9,4 +8,8 @@ function New_task(){
     else {
         see.classList.replace('show','hide');
     }
+}
+
+function Form(){
+    this.New_task()
 }

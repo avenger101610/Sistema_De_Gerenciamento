@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>System</title>
+    <link rel="shortcut icon" href="https://www.hashtagweb.net/img/favicon.png" type="image/x-icon">
 </head>
 <body>
     <header>
         <div class="row rowtitle">
             <div class="flex">
                 <h1><b>Sistema de Gerenciamento de Tarefas</b></h1>
-                <img class="sino" src="Images\Sino.png">
+                <img class="sino" src="Images\Sino.png" alt="sino">
             </div>
             <p>Otimizador de Trabalho</p>
         </div>
@@ -20,16 +21,14 @@
     <div>
         <button class="button_new_task" onclick="New_task()" type="button" name="button">Adicionar nova tarefa</button>
     </div>
-    <form action="Tarefa_nova.html" method="get">
 
     </form>
-    <iframe class="hide" name="Nova_tarefa" src="Tarefa_nova.html" id="frame" Style="height: 400px; width: 600px;"></iframe>
-
-    <script src="Index.js"></script>
-
+    <iframe class="hide" name="Nova_tarefa" src="Tarefa_nova.php" id="frame" Style="height: 400px; width: 600px;"></iframe>
     
 
+    <iframe src="Listar_tarefas.php" frameborder="200"></iframe>
 
 
+    <script src="Index.js"></script>   
 </body>
 </html>
