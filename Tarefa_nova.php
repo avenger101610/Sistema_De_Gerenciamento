@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -18,7 +18,7 @@
             
                 <article>
                     <label for="Name">Nome da tarefa:</label>
-                    <input name="name" type="text" id="Name" value="">
+                    <input name="name" type="text" id="name_tarefa" value="">
                 </article>
                 <article>
                     <label for="Description">Descrição:</label>
@@ -31,7 +31,7 @@
                     <label for="incompleto">incompleto</label>
                 </article>
                 <article>
-                    <input type="submit" value="enviar" onclick="Form()">
+                    <input type="submit" value="enviar" onclick="guardar()">
                     <input type="reset" value="resetar">
                 </article>
             
@@ -39,10 +39,15 @@
         
         </main>
     </div>
+
+    <div class="section">
+        <h1 id="tarefa_one" class="text">Olá Mundo!</h1>
+        <p>Lorem ipsum dolor</p>
+    </div>
   
 
     <script src="Index.js"></script> 
 
 </body>
-</html>
+</html> -->
 

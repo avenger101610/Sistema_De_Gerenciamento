@@ -1,4 +1,4 @@
-<?php 
+<!-- <?php 
     if(empty($_POST)){
         return null;
     }
@@ -6,4 +6,4 @@
     $name = $_POST['name'];
     $desc = $_POST['description'];
     echo "$name<br> $desc<br> $status";
-    ?>
+    ?> -->
