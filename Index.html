@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>System</title>
-    <link rel="shortcut icon" href="https://www.hashtagweb.net/img/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="Images\PNG lista tarefas.png" type="image/x-icon">
 </head>
 <body>
-    <header>
+     <header> <!-- cabeçalho do projeto -->
         <div class="row rowtitle">
             <div class="flex">
                 <h1><b>Sistema de Gerenciamento de Tarefas</b></h1>
@@ -17,29 +17,58 @@
             <p>Otimizador de Trabalho</p>
         </div>
     </header>
+     <div> <!-- tela de tarefas atuais -->
+        <div class="tasks">
+            <h3>Tarefas atuais: </h3> <!-- título da tela de tarefas-->
+            <div class="card">
+                <div class="flex spaceBetween">
+                    <h1 id="bloco">Tarefa 1</h1> <!-- lista das tarefas -->
+                    <img class="edit" src="Images\PNG icone de editar.png" alt="Editar">
+                </div>
+                <h2 id="bloco">Descrição: </h2>
+                <p id="bloco"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis deserunt laudantium nostrum quam rerum esse tempore temporibus provident assumenda quos nisi ipsum nesciunt dolorem possimus, iusto autem earum dolorum. Vitae.</p>
+                <p id="bloco"><strong>Em progresso</strong></p>
+            </div>
+            <div class="card">
+                <div class="flex spaceBetween">
+                    <h1 id="bloco">Tarefa 2</h1>      
+                    <img class="edit" src="Images\PNG icone de editar.png" alt="Editar">
+                </div>
+                <h2 id="bloco">Descrição: </h2>
+                <p id="bloco"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis deserunt laudantium nostrum quam rerum esse tempore temporibus provident assumenda quos nisi ipsum nesciunt dolorem possimus, iusto autem earum dolorum. Vitae.</p>
+                <p id="bloco"><strong>Em progresso</strong></p>
+            </div>
+            <div class="card">
+                <div class="flex spaceBetween">
+                    <h1 id="bloco">Tarefa 3</h1>      
+                    <img class="edit" src="Images\PNG icone de editar.png" alt="Editar">
+                </div>
+                <h2 id="bloco">Descrição: </h2>
+                <p id="bloco"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis deserunt laudantium nostrum quam rerum esse tempore temporibus provident assumenda quos nisi ipsum nesciunt dolorem possimus, iusto autem earum dolorum. Vitae.</p>
+                <p id="bloco"><strong>Em progresso</strong></p>
+            </div>
+            <div class="card">
+                <div class="flex spaceBetween">
+                    <h1 id="bloco">Tarefa 4</h1>      
+                    <img class="edit" src="Images\PNG icone de editar.png" alt="Editar">
+                </div>
+                <h2 id="bloco">Descrição: </h2>
+                <p id="bloco"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis deserunt laudantium nostrum quam rerum esse tempore temporibus provident assumenda quos nisi ipsum nesciunt dolorem possimus, iusto autem earum dolorum. Vitae.</p>
+                <p id="bloco"><strong>Em progresso</strong></p>
+            </div>
+            
     
-    <div class="tasks">
-        <h3>Tarefas atuais: </h3>
-        <div class="card">
-            <h1>Tarefa 1 <br></h1>
-            <h2>Descrição: <br></h2>
-            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis deserunt laudantium nostrum quam rerum esse tempore temporibus provident assumenda quos nisi ipsum nesciunt dolorem possimus, iusto autem earum dolorum. Vitae.</p>
         </div>
-        <div class="card">
-            <h1>Tarefa 2 <br></h1>
-            <h2>Descrição: <br></h2>
-            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis deserunt laudantium nostrum quam rerum esse tempore temporibus provident assumenda quos nisi ipsum nesciunt dolorem possimus, iusto autem earum dolorum. Vitae.</p>
+        
+        <div class="divB"> <!-- Botões de adicionar e remover tarefa -->
+            <input type="button" value="Adicionar nova Tarefa" class="button" id="add">
+            <input type="button" value="Remover uma Tarefa" class="button" id="remove">
         </div>
+    
     </div>
     
     
     
-    
-    
-    
-    
-    
-    
-    <script src="Index.js"></script>   
+    <script src="Script.js"></script>   
 </body>
 </html>
