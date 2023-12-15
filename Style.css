@@ -58,6 +58,12 @@ body{
     align-items: center;
 }
 
+.tasks{
+   display: flex; 
+   flex-direction: row;
+   flex-wrap: wrap;
+
+}
 .card{
     display: flex;
     flex-wrap: wrap;
@@ -68,17 +74,13 @@ body{
     border-radius: 5px;
     width: 25%;
     background-color: rgb(99, 133, 160);
+    height: 318.69px;
 }
 
 .card:hover{
     box-shadow: 0 12px 20px 2px rgba(0, 0, 0, 0.2);
 }
 
-.tasks{
-   display: flex; 
-   flex-direction: row;
-   flex-wrap: wrap;
-}
 
 h3{
     margin-top: 30px;
@@ -121,4 +123,34 @@ h3{
     width: 50px;
     height: 50px;
     padding-right: 10px;
+}
+
+.txt{
+    width: 220px;
+    margin-bottom: 5px;
+}
+
+.flexrow{
+    display: flex;
+    flex-direction: row;
+}
+
+.flexcolumn{    
+    display: flex;
+    flex-direction: column;
+
+}
+.txt2{
+    display: flex;
+    align-items: column;
+    width: 333px;
+    height: 75px;
+    margin-bottom: 5px;
+    padding-left: 10px;
+}
+
+.alignLeft{
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
 }

@@ -18,7 +18,7 @@
         </div>
     </header>
      <div> <!-- tela de tarefas atuais -->
-        <div class="tasks">
+        <div class="tasks" id="">
             <h3>Tarefas atuais: </h3> <!-- título da tela de tarefas-->
             <div class="card">
                 <div class="flex spaceBetween">
@@ -49,19 +49,39 @@
             </div>
             <div class="card">
                 <div class="flex spaceBetween">
-                    <h1 id="bloco">Tarefa 4</h1>      
+                    <h1 id="bloco">Tarefa 4</h1>
                     <img class="edit" src="Images\PNG icone de editar.png" alt="Editar">
                 </div>
                 <h2 id="bloco">Descrição: </h2>
                 <p id="bloco"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis deserunt laudantium nostrum quam rerum esse tempore temporibus provident assumenda quos nisi ipsum nesciunt dolorem possimus, iusto autem earum dolorum. Vitae.</p>
                 <p id="bloco"><strong>Em progresso</strong></p>
             </div>
-            
+            <div class="card">
+                <h1 id="bloco">Tarefa nova:</h1>
+                <div class="flexrow">
+                    <label for="titletxt" id="bloco">Título da tarefa:</label>
+                    <input type="text" class="txt" name="titletxt">
+                </div>
+                <div class="flexcolumn">
+                    <label for="desctxt" id="bloco">Descrição da Tarefa:</label>
+                    <textarea type="textarea" class="txt2" name="desctxt"></textarea>
+                </div>
+                <div class="alignLeft">
+                    <input type="radio" name="stattxt" id="conctxt">
+                    <label for="conctxt" id="bloco">Concluído</label>
+                    <input type="radio" name="stattxt" id="inconctxt">
+                    <label for="conctxt" id="bloco">Inconcluído</label>
+                </div>
+                <div class="alignLeft">
+                    <button type="submit">Enviar</button>
+                    <button type="reset">Resetar</button>
+                </div>
+            </div>
     
         </div>
         
         <div class="divB"> <!-- Botões de adicionar e remover tarefa -->
-            <input type="button" value="Adicionar nova Tarefa" class="button" id="add">
+            <input type="button" value="Adicionar nova Tarefa" class="button" id="add" onclick="add()">
             <input type="button" value="Remover uma Tarefa" class="button" id="remove">
         </div>
     
