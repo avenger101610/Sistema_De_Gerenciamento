@@ -56,26 +56,42 @@
                 <p id="bloco"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis deserunt laudantium nostrum quam rerum esse tempore temporibus provident assumenda quos nisi ipsum nesciunt dolorem possimus, iusto autem earum dolorum. Vitae.</p>
                 <p id="bloco"><strong>Em progresso</strong></p>
             </div>
+            
+            <div><h3>Novas Tarefas:</h3></div>
+            
             <div class="card">
                 <h1 id="bloco">Tarefa nova:</h1>
-                <div class="flexrow">
-                    <label for="titletxt" id="bloco">Título da tarefa:</label>
-                    <input type="text" class="txt" name="titletxt">
-                </div>
-                <div class="flexcolumn">
-                    <label for="desctxt" id="bloco">Descrição da Tarefa:</label>
-                    <textarea type="textarea" class="txt2" name="desctxt"></textarea>
-                </div>
-                <div class="alignLeft">
-                    <label for="conctxt" id="bloco">Concluído</label>
-                    <input type="radio" name="stattxt" id="conctxt">
-                    <label for="inconctxt" id="ibloco">Inconcluído</label>
-                    <input type="radio" name="stattxt" id="inconctxt">
-                </div>
-                <div class="alignLeft">
-                    <button type="submit">Enviar</button>
-                    <button type="reset">Resetar</button>
-                </div>
+                
+                <?php 
+                    $data = filter_input_array(INPUT_POST);
+                    if(!empty($data))
+                    {
+                        
+                    }
+                        
+                    
+                ?>
+                
+                <form name="add_tarefa" action="" method="post">
+                    <div class="flexrow">
+                        <label for="titletxt" id="bloco">Título da tarefa:</label>
+                        <input type="text" class="txt" name="titletxt" required>
+                    </div>
+                    <div class="flexcolumn">
+                        <label for="desctxt" id="bloco">Descrição da Tarefa:</label>
+                        <textarea type="textarea" class="txt2" name="desctxt" required></textarea>
+                    </div>
+                    <div class="alignLeft">
+                        <label for="conctxt" id="bloco">Concluído</label>
+                        <input type="radio" name="stattxt" id="conctxt" required>
+                        <label for="inconctxt" id="ibloco">Inconcluído</label>
+                        <input type="radio" name="stattxt" id="inconctxt" required >
+                    </div>
+                    <div class="alignLeft">
+                        <button type="submit" name="Send">Enviar</button>
+                        <button type="reset">Resetar</button>
+                    </div>
+                </form>
             </div>
     
         </div>
@@ -84,10 +100,8 @@
             <input type="button" value="Adicionar nova Tarefa" class="button" id="add" onclick="add()">
             <input type="button" value="Remover uma Tarefa" class="button" id="remove">
         </div>
-    
+        
     </div>
-    
-    
     
     <script src="Script.js"></script>   
 </body>
