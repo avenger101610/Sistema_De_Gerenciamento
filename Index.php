@@ -97,7 +97,7 @@
         </div>
         
         <div class="divB"> <!-- Botões de adicionar e remover tarefa -->
-            <input type="button" value="Adicionar nova Tarefa" class="button" id="add" onclick="add()">
+            <!-- <input type="button" value="Adicionar nova Tarefa" class="button" id="add" onclick="add()"> -->
             <input type="button" value="Remover uma Tarefa" class="button" id="remove">
         </div>
         
