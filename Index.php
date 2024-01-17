@@ -88,7 +88,7 @@
                         <input type="radio" name="stattxt" id="inconctxt" required >
                     </div>
                     <div class="alignLeft">
-                        <button type="submit" name="Send">Enviar</button>
+                        <button type="submit" name="Send">Criar Nova Tarefa</button>
                         <button type="reset">Resetar</button>
                     </div>
                 </form>
