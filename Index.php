@@ -1,3 +1,7 @@
+<?php 
+    include_once 'Y_conection.php'
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
