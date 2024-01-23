@@ -70,7 +70,7 @@
                     $data = filter_input_array(INPUT_POST);
                     if(!empty($data))
                     {
-                        
+                        var_dump($data);
                     }
                         
                     
