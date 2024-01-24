@@ -67,10 +67,24 @@
                 <h1 id="bloco">Tarefa nova:</h1>
                 
                 <?php 
+                    // Código para por dados no banco de dados
                     $data = filter_input_array(INPUT_POST);
                     if(!empty($data))
                     {
-                        var_dump($data);
+                        //var_dump($data);
+                        $query = "INSERT INTO info_tarefa (titletxt, desctxt, stattxt, Send) VALUES (:titletxt, :desctxt, :stattxt, NOW())";
+                        $cad = $conn->prepare($query);
+                        $cad->bindParam(':titletxt', $data['titletxt'], PDO::PARAM_STR);
+                        $cad->bindParam(':desctxt', $data['desctxt'], PDO::PARAM_STR);
+                        $cad->bindParam(':stattxt', $data['stattxt'], PDO::PARAM_BOOL);
+                    
+                        $cad->execute();
+
+                        if($cad->rowCount()){
+                            //echo "Criação de Tarefa concluída com exito!<br>";
+                        }else{
+                            echo "ERRO: Falha ao criar nova Tarefa, tente novamente<br>";
+                        }
                     }
                         
                     
