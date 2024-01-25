@@ -67,9 +67,16 @@
                 <h1 id="bloco">Tarefa nova:</h1>
                 
                 <?php 
+                    // Código ativar código dos banco de dados
+                    $ativo = false;
+                    
+                    function criar(){
+                        $ativo = true;
+                    }
+                    
                     // Código para por dados no banco de dados
                     $data = filter_input_array(INPUT_POST);
-                    if(!empty($data))
+                    if($ativo == true)
                     {
                         //var_dump($data);
                         $query = "INSERT INTO info_tarefa (titletxt, desctxt, stattxt, Send) VALUES (:titletxt, :desctxt, :stattxt, NOW())";
@@ -85,6 +92,12 @@
                         }else{
                             echo "ERRO: Falha ao criar nova Tarefa, tente novamente<br>";
                         }
+                    
+                        $criacao = "SELECT * FROM info_tarefa ORDER BY id DESC";
+                        $ajust = $conn->prepare($criacao);
+                        $criar = $conn->query($criacao);
+                    
+                        print_r($criar);
                     }
                         
                     
@@ -106,7 +119,7 @@
                         <input type="radio" name="stattxt" id="inconctxt" required >
                     </div>
                     <div class="alignLeft">
-                        <button type="submit" name="Send">Criar Nova Tarefa</button>
+                        <button type="submit" name="Send" action="criar">Criar Nova Tarefa</button>
                         <button type="reset">Resetar</button>
                     </div>
                 </form>
