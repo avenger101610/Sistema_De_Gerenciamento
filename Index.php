@@ -3,7 +3,7 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <link rel="stylesheet" href="Style.css">
     <meta charset="UTF-8">
@@ -93,6 +93,7 @@
                             echo "ERRO: Falha ao criar nova Tarefa, tente novamente<br>";
                         }
                     
+                        // Consertar essa parte
                         $criacao = "SELECT * FROM info_tarefa ORDER BY id DESC";
                         $ajust = $conn->prepare($criacao);
                         $criar = $conn->query($criacao);
