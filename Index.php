@@ -1,5 +1,7 @@
 <?php 
-    include_once 'Y_conection.php'
+    include_once 'Y_conection.php';
+    include_once 'X_criar.php';
+    include_once 'Z_0data.php';
 ?>
 
 <!DOCTYPE html>
@@ -60,49 +62,11 @@
                 <p id="bloco"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis deserunt laudantium nostrum quam rerum esse tempore temporibus provident assumenda quos nisi ipsum nesciunt dolorem possimus, iusto autem earum dolorum. Vitae.</p>
                 <p id="bloco"><strong>Em progresso</strong></p>
             </div>
-            
+            <!-- Seção de novas tarefas -->
             <div><h3>Novas Tarefas:</h3></div>
             
             <div class="card">
                 <h1 id="bloco">Tarefa nova:</h1>
-                
-                <?php 
-                    // Código ativar código dos banco de dados
-                    $ativo = false;
-                    
-                    function criar(){
-                        $ativo = true;
-                    }
-                    
-                    // Código para por dados no banco de dados
-                    $data = filter_input_array(INPUT_POST);
-                    if($ativo == true)
-                    {
-                        //var_dump($data);
-                        $query = "INSERT INTO info_tarefa (titletxt, desctxt, stattxt, Send) VALUES (:titletxt, :desctxt, :stattxt, NOW())";
-                        $cad = $conn->prepare($query);
-                        $cad->bindParam(':titletxt', $data['titletxt'], PDO::PARAM_STR);
-                        $cad->bindParam(':desctxt', $data['desctxt'], PDO::PARAM_STR);
-                        $cad->bindParam(':stattxt', $data['stattxt'], PDO::PARAM_BOOL);
-                    
-                        $cad->execute();
-
-                        if($cad->rowCount()){
-                            //echo "Criação de Tarefa concluída com exito!<br>";
-                        }else{
-                            echo "ERRO: Falha ao criar nova Tarefa, tente novamente<br>";
-                        }
-                    
-                        // Consertar essa parte
-                        $criacao = "SELECT * FROM info_tarefa ORDER BY id DESC";
-                        $ajust = $conn->prepare($criacao);
-                        $criar = $conn->query($criacao);
-                    
-                        print_r($criar);
-                    }
-                        
-                    
-                ?>
                 
                 <form name="add_tarefa" action="" method="post">
                     <div class="flexrow">
@@ -120,7 +84,7 @@
                         <input type="radio" name="stattxt" id="inconctxt" required >
                     </div>
                     <div class="alignLeft">
-                        <button type="submit" name="Send" action="criar">Criar Nova Tarefa</button>
+                        <button type="submit" name="Send" method="POST" onclick="Z_0data.php">Criar Nova Tarefa</button>
                         <button type="reset">Resetar</button>
                     </div>
                 </form>
@@ -128,8 +92,7 @@
     
         </div>
         
-        <div class="divB"> <!-- Botões de adicionar e remover tarefa -->
-            <!-- <input type="button" value="Adicionar nova Tarefa" class="button" id="add" onclick="add()"> -->
+        <div class="divB"> <!-- Botão de remover tarefa -->
             <input type="button" value="Remover uma Tarefa" class="button" id="remove">
         </div>
         
