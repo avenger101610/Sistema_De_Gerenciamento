@@ -84,7 +84,7 @@
                         <input type="radio" name="stattxt" id="inconctxt" required >
                     </div>
                     <div class="alignLeft">
-                        <button type="submit" name="Send" method="POST" onclick="Z_0data.php">Criar Nova Tarefa</button>
+                        <button type="submit" name="Send" method="POST" onclick="ativar()">Criar Nova Tarefa</button>
                         <button type="reset">Resetar</button>
                     </div>
                 </form>
